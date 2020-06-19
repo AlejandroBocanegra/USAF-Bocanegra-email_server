@@ -9,6 +9,7 @@ function App() {
   return (
     <div>
 <FetchEmail />
+{/* Add in a button to compose email */}
     </div>
   );
 }
@@ -32,8 +33,10 @@ Mandatory Content
 
 1. View all of my email messages (subject line + sender) //start here
 a. I need to pull all the email from the server and place it within a JSON so that I can access it later
+>> Looking through the file, they are located at 'email.JSON'
 b. I need to extract the subject line and header information from the stored data in the JSON
 c. I need to display the info in a list or table
+// having trouble accessing the data from the email app
 
 2. View one of my email messages with all of its details //third
 a. I need to attach an onClick function to the list or table
@@ -42,8 +45,8 @@ b. handleClick need to display the email
 3. Send an email //second
 a. need to create a button for a new email
 b. button need an onClick function built into it where the click triggers the composer
-c. composer will need to display 'From', 'To', 'Subject', 'Body'
-d. composer will need a button to send
+c. create another file called "composer.js", which will need to display a table with 'From', 'To', 'Subject', 'Body' text input
+d. composer will need a button to send, and also send back to the homepage with the email table
 e. the button will have a handleClick method to display alert "Your Message Has Been Sent"
 
 4. Search for a specific email by subject //fourth

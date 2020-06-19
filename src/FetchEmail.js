@@ -1,24 +1,29 @@
 import React from 'react';
-//import App from "./App"
-//import { unmountComponentAtNode } from 'react-dom';
 
 export default class FetchEmail extends React.Component {
   state = {
-    loading: true
+    didYaGetThatThingISentYa: true,
+    email: null,
   };
 
 async componentDidMount () {
-    const url = "http://localhost:3001";
+    const url = "http://localhost:3001/emails.json";
     const response = await fetch(url);
     const data= await response.json();
+    this.setState ({email: data, didYaGetThatThingISentYa: false});
     console.log(data);
-
   }
 
   render () {
     return (
       <div>
-        {this.state.loading ? <div> Loading... </div> : <div> person... </div>}
+        {this.state.didYaGetThatThingISentYa || this.state.email ? (
+            <div>No... </div>
+        ) : (
+            <div>
+            <div>email is here</div>
+            </div>
+        )}
       </div>
     );
   }
