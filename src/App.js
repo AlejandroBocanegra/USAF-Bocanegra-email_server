@@ -3,8 +3,6 @@ import React from 'react';
 import FetchEmail from "./FetchEmail"
 import './App.css';
 
-
-
 function App() {
   return (
     <div>

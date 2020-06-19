@@ -14,6 +14,11 @@ async componentDidMount () {
     console.log(data);
   }
 
+  /*Function to map 'email' and add the information to the table
+
+
+
+  */
   render () {
     return (
       <div>
@@ -23,6 +28,7 @@ async componentDidMount () {
             <div>
             <div>email is here</div>
             </div>
+            /*Create the table where the email will be displayed so that I can start to manipulate it. Table would have "sender", "recipient", "subject", "message", "date", and "id". All fields would initially be hidden except for "subject" and "sender"*/
         )}
       </div>
     );
